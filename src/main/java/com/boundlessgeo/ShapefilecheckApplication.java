@@ -28,11 +28,11 @@ public class ShapefilecheckApplication implements CommandLineRunner {
 				logger.info(shp);
 				cs.openShapeFile(shp);
 			}else{
-				throw new ExitException();
+				logger.warn("Path does not point at file with shp extension");
 			}
 			
 		}else{
-			throw new ExitException();
+			logger.warn("Too many arguments.  Should just be path to shapefile");
 		}
 		
 	}
